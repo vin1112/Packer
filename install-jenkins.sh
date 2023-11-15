@@ -24,3 +24,9 @@ sudo apt-get install -y jenkins
 sudo systemctl enable jenkins
 
 sudo systemctl start jenkins
+
+sudo systemctl stop jenkins
+
+sudo sed -i 's|<installStateName>NEW</installStateName>|<installStateName>INITIAL_SETUP_COMPLETED</installStateName>|' /var/lib/jenkins/hudson.model.UpdateCenter.xml
+
+sudo systemctl start jenkins
