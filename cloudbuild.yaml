@@ -1,3 +1,0 @@
-steps:
-- name: 'gcr.io/prj-fgli-poc-01/packer'
-  args: ['build','var-file=values.pkvars.hcl','build.pkr.hcl']
